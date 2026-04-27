@@ -1,8 +1,9 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Activity, Stethoscope } from "lucide-react"
+import { Activity } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ModeToggle } from "@/components/mode-toggle"
 import { LanguageToggle } from "@/components/language-toggle"
@@ -24,9 +25,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Stethoscope className="size-5" aria-hidden />
-          </div>
+          <Image
+            src="/logo.png"
+            alt="HealthGuard AI Logo"
+            width={36}
+            height={36}
+            className="h-9 w-9"
+          />
           <div className="flex flex-col leading-none">
             <span className="text-base font-semibold tracking-tight">
               HealthGuard
