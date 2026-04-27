@@ -130,7 +130,7 @@ export function Chatbot() {
       }
       setState(data.state)
     } catch (err) {
-      console.log("[v0] medibot error:", (err as Error).message)
+      console.log("[medibot] error:", (err as Error).message)
       setMessages((prev) => [
         ...prev,
         makeBotMessage(
@@ -317,7 +317,10 @@ function MessageBubble({
           {message.diagnosis && <DiagnosisCard diagnosis={message.diagnosis} />}
         </div>
 
-        <span className="px-2 text-[10px] text-muted-foreground">
+        <span
+          suppressHydrationWarning
+          className="px-2 text-[10px] text-muted-foreground"
+        >
           {formatTime(message.timestamp)}
         </span>
 

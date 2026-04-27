@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   title: "HealthGuard AI · Early Disease Detection",
   description:
     "AI-powered symptom analysis. Get instant disease predictions, risk levels, and personalized recommendations.",
-  generator: "v0.app",
   icons: {
     icon: [
       { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
